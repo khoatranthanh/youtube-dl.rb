@@ -100,7 +100,7 @@ module YoutubeDL
     end
 
     def set_information_from_json(json) # :nodoc:
-      @information = json
+      @information = JSON.parse(json, symbolize_names: true)
     end
 
     def grab_information_without_download # :nodoc:
